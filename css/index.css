@@ -2,7 +2,7 @@
     /* Colors */
     --primary-color: #37474F;
     --primary-color2: #263238;
-    --secondary-color: #f5c029;
+    --secondary-color: #FFC100;
     --white-color: #FAFAFA;
     --soft-color: #FFF9F4;
 
@@ -15,7 +15,7 @@
     --sd-font-size: 2rem;
     --medium-font-size: 2.5rem;
     --big-font-size: 3.5rem;
-    --h1-font-size: 7.5rem;
+    --h1-font-size: 4.5rem;
     --li-font-size: 1.8rem;
 
     /* Padding */
@@ -50,8 +50,20 @@ ul {
     list-style: none;
 }
 
-h1, h2, h3 {
+h1 {
     font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primary-color);
 }
@@ -89,11 +101,13 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -50px;
+    z-index: 99;
 }
 
 .logo img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
 }
 
 .menu-toggle-container {
@@ -107,10 +121,11 @@ button {
 .menu {
     display: flex;
     align-items: center;
+    padding-top: 1rem;
 }
 
 .menu li a {
-    font-size: var(--sd-font-size);
+    font-size: 1.3rem;
     font-weight: 700;
     color: var(--primary-color);
 
@@ -118,7 +133,9 @@ button {
     margin-right: 1.5rem;
 }
 
-.menu li a:hover {
+.a-home:hover,
+.a-destinations:hover,
+.a-prices:hover   {
     color: var(--secondary-color);
     transition: .5s ease;
 }
@@ -140,4 +157,403 @@ button {
 .btn:hover {
     opacity: 0.8;
     transition: .5s ease;
+}
+
+
+/* Main */
+
+.main {
+    display: grid;
+    grid-template-areas: 
+    "greetings greetings"
+    "best-destinations best-destinations"
+    "reasons-to-travel reasons-to-travel"
+    "prices prices";
+    z-index: -99;
+}
+
+.greetings {
+    grid-area: greetings;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, auto));
+    justify-content: center;
+    align-items: center;
+
+    margin-top: -50px;
+    padding-bottom: var(--sd-padding-size);
+}
+
+.content-invite {
+    white-space: pre-line;
+}
+
+.content-invite h1 {
+    font-size: var(--h1-font-size);
+    font-weight: 700;
+
+    line-height: 1.25;
+}
+
+.content-invite p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: justify;
+}
+
+.content-invite span {
+    color: var(--secondary-color)
+}
+
+.figure-travelling img{
+    width: 110%;
+    margin-top: -60px;
+}
+
+/* Best Destinations */
+
+.best-destinations {
+    grid-area: best-destinations;
+    padding-bottom: var(--sd-padding-size);
+}
+
+/* Trip Container */
+
+.trip-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding-top: var(--sd-padding-size);
+
+    
+}
+
+/* Trip Card */
+
+.trip-card {
+    width: 33%;
+    height: 300px;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid var(--secondary-color);
+    border-radius: 1rem 1rem 0 0;
+
+    margin: 0 15px;
+}
+
+.trip-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--secondary-color);
+    padding: 0.5rem;
+
+    max-height: 86px;
+    height: 12%;
+
+    font-weight: 700;
+    color: var(--primary-color)
+}
+
+#card-one {
+    background-image: url(/img/ahmedabad-india.svg);   
+}
+
+#card-two {
+    background-image: url(/img/sidney-australia.svg);
+}
+
+#card-three {
+    background-image: url(/img/taipei-taiwan.svg); 
+}
+
+#card-four {
+    background-image: url(/img/berlin-alemanha.svg); 
+}
+
+#card-five {
+    background-image: url(/img/hongkong-china.svg); 
+}
+
+#card-six{
+    background-image: url(/img/london-inglaterra.svg); 
+}
+
+/* Reasons to travel */
+.reasons-to-travel {
+    grid-area: reasons-to-travel;
+    padding-bottom: var(--sd-padding-size);
+}
+
+.reasons-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, auto));
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+    padding-top: var(--sd-padding-size);
+}
+
+.reason-item {
+    padding-top: 2rem;
+}
+
+.reason-item p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--primary-color);
+    text-align: justify;
+
+    padding-left: 5rem;
+    width: 75%;
+}
+
+.header-item {
+    display: flex;
+    align-items: center;
+}
+
+.header-item span {
+    font-size: var(--big-font-size);
+    font-weight: 700;
+    color: var(--primary-color);
+
+    padding-right: 1rem;
+    width: 100%;
+    max-width: 80px;
+}
+
+.travelers {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.travelers img {
+    width: 95%;
+}
+
+/* Prices */
+
+.prices {
+    grid-area: prices;
+    padding-bottom: var(--ft-padding-size);
+}
+
+.header-prices h2 {
+    font-size: var(--big-font-size);
+
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.header-prices p {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    color: var(--primary-color);
+    text-align: center;
+
+    padding: 4rem 0;
+}
+
+.prices-card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    border: solid .3rem var(--secondary-color);
+    border-radius: 1rem;
+
+    padding: 4rem 2rem;
+}
+
+.card {
+    width: 100%;
+    max-width: 380px;
+    height: 530px;
+
+    padding: 5rem 2.5rem;
+    margin-right: 2rem;
+
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    word-wrap: break-word;
+}
+
+.card#premium {
+    margin-right: 0;
+}
+
+.card-body {
+    height: 100%;
+}
+
+.card-body .price {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.card-body .price span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white-color);
+}
+
+.card-body .plan-type {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.card-body .plan-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white-color);
+    text-align:left;
+
+    padding-top: 1rem;
+}
+
+.card-body .plan-list {
+    max-height: 200px;
+    height: 100%;
+    padding-top: 2rem;
+
+}
+
+.card-body .plan-list li {
+    display: flex;
+    align-items: center;
+
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.card-body .plan-list i {
+    font-size: 1rem;
+    padding: 1rem 1.2rem 1rem 0;
+    color: var(--white-color);
+}
+
+.plan-btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+
+    cursor: pointer;
+}
+
+.plan-btn-container button {
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: solid .2rem var(--secondary-color);
+
+    font-size: 1.3rem;
+
+}
+
+/* Footer */
+
+.footer {
+    grid-area: footer;
+    padding-bottom: 1rem;
+}
+
+.footer-menu-container {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25%, auto));
+}
+
+.footer-menu-item span {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+
+    padding-bottom: 1.8rem;
+}
+
+.footer-menu li {   
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    
+    padding: .5rem 0;
+    cursor: pointer;
+}
+
+.menu-social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-social-media li {
+    min-width: 50px;
+    min-height: 50px;
+
+    border-radius: 50%;
+    margin-right: 2rem;
+
+    background-color: var(--secondary-color);
+
+    font-size: 1.5rem;
+    color: var(--white-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.menu-social-media li:last-child {
+    margin-right: 0;
+}
+
+.facebook-menu:hover {
+    background-color:#3b5998;
+    transition: .5s ease;
+}
+
+.instagram-menu:hover {
+    background-color:#c32aa3;
+    transition: .5s ease;
+}
+
+.youtube-menu:hover {
+    background-color:#bb0000;
+    transition: .5s ease;
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.brand-container img {
+    width: 80%;
 }

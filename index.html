@@ -17,6 +17,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
 
         <title>Sua viagem, nossa missão :)</title>
+        <link rel="shortcut icon" href="./img/logo-menu.svg" type="image/x-icon">
     </head>
 
     <body>
@@ -24,14 +25,14 @@
             <header class="header">
                 <div class="brand-menu-container">
                     <a href="/" class="logo">
-                        <img src="./img/logo-menu.png" alt="">
+                        <img src="./img/logo-menu.svg" alt="">
                     </a>
                     <div class="menu-toggle-container"><i class="fas fa-bars"></i></div>
                 </div>
                 <ul class="menu">
-                    <li><a href="/">Início</a></li>
-                    <li><a href="#destinations" id="a-destinations">Destinos</a></li>
-                    <li><a href="#prices" id="a-prices">Preços</a></li>
+                    <li><a href="/" class="a-home">Início</a></li>
+                    <li><a href="#destinations" class="a-destinations" id="a-destinations">Destinos</a></li>
+                    <li><a href="#prices" class="a-prices" id="a-prices">Preços</a></li>
                     <li><a href="#" class="btn" id="btn">Contato</a></li>
                 </ul>
             </header>
@@ -39,14 +40,229 @@
             <main class="main">
                 <section class="greetings">
                     <div class="content-invite">
-                        <h1>Hey, Vamos tirar férias?</h1>
-                        <p>Você escolhe o destino e nós cuidamos de todas as etapas </p>
+                        <h1>Hey, 
+                            Vamos tirar 
+                            férias?
+                        </h1>
+                        <p>Você escolhe o destino e nós cuidamos de 
+                            todas as etapas! <span>Viaje tranquilo :)</span> 
+                        </p>
                     </div>
                     <div class="figure-travelling">
-                        <!-- <img src="./img/logo-home.svg" alt=""> -->
+                        <img src="./img/logo-home.svg" alt="">
+                    </div>
+                </section>
+
+                <section class="best-destinations" id="destinations">
+                    <h2>Destinos populares</h2>
+
+                    <div class="trip-container">
+                        <div class="trip-card" id="card-one">
+                            <div class="trip-name">
+                                <p>Ahmedabad - Índia</p>
+                            </div>
+                        </div>
+
+                        <div class="trip-card" id="card-two">
+                            <div class="trip-name">
+                                <p>Sydney - Austrália</p>
+                            </div>
+                        </div>
+
+                        <div class="trip-card" id="card-three">
+                            <div class="trip-name">
+                                <p>Taipei - Taiwan</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="trip-container">
+                        <div class="trip-card" id="card-four">
+                            <div class="trip-name">
+                                <p>Berlin - Alemanha</p>
+                            </div>
+                        </div>
+
+                        <div class="trip-card" id="card-five">
+                            <div class="trip-name">
+                                <p>Hong Kong - China</p>
+                            </div>
+                        </div>
+
+                        <div class="trip-card" id="card-six">
+                            <div class="trip-name">
+                                <p>Londres - Inglaterra</p>
+                            </div>
+                        </div>         
+                    </div>
+                </section>
+
+                <section class="reasons-to-travel">
+                    <h2>Motivos para viajar conosco</h2>
+
+                    <div class="reasons-container">
+                        <div class="reasons-list">
+                            <div class="reason-item">
+                                <div class="header-item">
+                                    <span>01</span>
+                                    <h3>Preço competitivo</h3>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                </p>
+                            </div>
+
+                            <div class="reason-item">
+                                <div class="header-item">
+                                    <span>02</span>
+                                    <h3>Qualidade & Segurança</h3>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, 
+                                </p>
+                            </div>
+
+
+                            <div class="reason-item">
+                                <div class="header-item">
+                                    <span>03</span>
+                                    <h3>Muita gente já viajou!</h3>
+                                </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet,
+                                </p>
+                            </div>
+                        </div>
+                        <div class="travelers">
+                            <img src="./img/couple-sampa.svg" alt="">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="prices" id="prices">
+                    <div class="header-prices">
+                        <h2>Nossos preços</h2>
+                        <p>Escolha o plano mais adequado para você</p>
+                    </div>
+
+                    <div class="prices-card-container">
+                        <div class="card" id="standard">
+                            <div class="card-body">
+                                <p class="price">R$100,00<span>/por mês</span> </p>
+                                <p class="plan-type">Standard</p>
+                                <p class="plan-text">Para quem está começando a viajar.</p>
+
+                                <ul class="plan-list">
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> Viagens nacionais
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> City tour/Guias locais
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> 3 diárias
+                                    </li>
+                                </ul>
+                                
+                                <div class="plan-btn-container">
+                                    <button type="button" id="bt-standard" value="standard">Meu plano</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" id="essentials">
+                            <div class="card-body">
+                                <p class="price">R$160,00<span>/por mês</span> </p>
+                                <p class="plan-type">Essentials</p>
+                                <p class="plan-text">Para quem curte uma estadia longa.</p>
+
+                                <ul class="plan-list">
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> Viagens nacionais
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> City tour/Guias locais
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> 5 diárias
+                                    </li>
+                                </ul>
+                                
+                                <div class="plan-btn-container">
+                                    <button type="button" id="bt-essentials" value="essentials">Meu plano</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" id="premium">
+                            <div class="card-body">
+                                <p class="price">R$250,00<span>/por mês</span> </p>
+                                <p class="plan-type">Premium</p>
+                                <p class="plan-text">A melhor experiência internacional.</p>
+
+                                <ul class="plan-list">
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> Viagens Internacionais
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> City tour/Guias locais
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dot-circle"></i> 7 diárias
+                                    </li>
+                                </ul>
+                                
+                                <div class="plan-btn-container">
+                                    <button type="button" id="bt-premium" value="premium">Meu plano</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
+
+            <footer class="footer">
+                <div class="footer-menu-container">
+                    <div class="footer-menu-item">
+                        <span>Companhia</span>
+                        <ul class="footer-menu">
+                            <li>Carreiras</li>
+                            <li>Sobre nós</li>
+                            <li>Blog</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <span>Links úteis</span>
+                        <ul class="footer-menu">
+                            <li>Termos de uso</li>
+                            <li>Política de privacidade</li>
+                            <li>COVID-19</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-menu-item">
+                        <span>Recursos</span>
+                        <ul class="footer-menu">
+                            <li>Central de ajuda</li>
+                            <li>Conheça o Brasil</li>
+                            <li>Viagens Internacionais</li>
+                            <li>Seguro viagem</li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu-item">
+                        <div class="social-media-container">
+                            <ul class="menu-social-media">
+                                <li class="facebook-menu"><i class="fab fa-facebook facebook"></i></li>
+                                <li class="instagram-menu"><i class="fab fa-instagram"></i></li>
+                                <li class="youtube-menu"><i class="fab fa-youtube"></i></li>
+                            </ul>
+                        </div>
+                        <a href="/" class="brand-container"><img src="./img/logo-menu.png" alt=""></a>
+                    </div>
+                </div>
+            </footer>
         </div>
     </body>
 </html>
