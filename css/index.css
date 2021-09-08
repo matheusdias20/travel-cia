@@ -79,12 +79,14 @@ button {
 
     border: none;
     border-radius: 1rem;
+
+    cursor: pointer;
 }
 
 
 /* Container */
-.container {
-    display: grid;
+#container {
+    /* display: grid; */
     grid-template-areas: 
     "header"
     "main"
@@ -380,7 +382,7 @@ button {
     max-width: 380px;
     height: 530px;
 
-    padding: 5rem 2.5rem;
+    padding: 3rem 2.5rem 5rem 2.5rem;
     margin-right: 2rem;
 
     background-color: var(--primary-color);
@@ -457,7 +459,6 @@ button {
     align-items: center;
     padding: 1rem 0;
 
-    cursor: pointer;
 }
 
 .plan-btn-container button {
@@ -467,7 +468,14 @@ button {
     border: solid .2rem var(--secondary-color);
 
     font-size: 1.3rem;
+    cursor: pointer;
 
+}
+
+.plan-btn-container button:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+  transition: 0.3s ease;
 }
 
 /* Footer */
@@ -557,3 +565,145 @@ button {
 .brand-container img {
     width: 80%;
 }
+
+
+/* Responsive  */
+
+
+@media screen and (max-width: 1148px) {
+    .prices-card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+
+        justify-items: center;
+    }
+
+    .card {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .menu-toggle-container {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        z-index: 999;
+    }
+
+    .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+
+        width: 100%;
+        max-width: 250px;
+
+        height: 100vh;
+        padding: 150px 20px;
+        z-index: 800;
+
+        background-color: var(--primary-color);
+        flex-direction: column;
+        
+        transition: .5s ease
+    }
+
+    .menu li a {
+        color: var(--white-color);
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .menu-toggle-container.active {
+        position: fixed;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 840px) {
+    .logo {
+        max-width: 177px;
+    }
+
+    .greetings {
+        display: block;
+        padding: 4rem 0 5rem;
+    }
+
+    .content-invite {
+        white-space: normal;
+        text-align: left;
+    }
+
+    .content-invite p {
+        max-width: 80%;
+        padding-top: 4rem;
+    }
+
+    .figure-travelling, .travelers {
+        justify-content: center;
+    }
+
+    .trip-container {
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .trip-card {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+
+    .trip-card#card-one {
+        margin-top: 4rem;
+    }
+
+    .reasons-container {
+        display: block;
+    }
+
+    .reason-item p {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .footer-menu-container {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+
+    .brand-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .content-invite h1 {
+        font-size: 2.5rem;
+    }
+
+    .content-invite p {
+        max-width: 100%;
+        padding-top: 2rem;
+    }
+
+    .figure-travelling {
+        padding-top: 2rem;
+    }
+
+    .trip-card {
+        width: 100%;
+    }
+
+    .card {
+        padding: 3rem 4rem;
+    }
+}  

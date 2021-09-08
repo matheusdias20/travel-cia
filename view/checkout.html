@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/checkout.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+        <title>Sua viagem, nossa missão :)</title>
+        <link rel="shortcut icon" href="../img/logo-menu.svg" type="image/x-icon">
+    </head>
+
+    <body>
+        <div class="container" id="container">
+            <div class="checkout-container">
+                <div class="congratulations-and-plan-type">
+                    <h1>Uhull! Parabéns por sua escolha!</h1>
+                    <div class="plan-type">
+
+                    </div>
+                </div>
+                <div class="form-container">
+                    <h2>Detalhes do pagamento</h2>
+                    <form action="#" name="checkout">
+                        <div class="input-group">
+                            <label for="name">Seu nome</label>
+                            <input type="text" name="name" id="name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="email" id="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="cardName">Nome do titular (como no cartão)</label>
+                            <input type="text" name="cardName" id="cardName" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="cardNumber">Número do cartão</label>
+                            <input type="text" name="cardNumber" id="cardNumber" required>
+                        </div>
+                        <div class="card-special-info">
+                            <div class="input-group">
+                                <label for="expirationDate">Data de expiração</label>
+                                <input type="text" name="expirationDate" id="expirationDate" placeholder="Ex.: 01/25 (M/A)" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="securityCode">CVV (no verso)</label>
+                                <input type="text" name="securityCode" id="securityCode" required>
+                            </div>
+                        </div>
+                        <div class="btn-container">
+                            <button>Pagar :)</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script src="../src/checkout.js"></script>
+    </body>
+</html>
